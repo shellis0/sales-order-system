@@ -16,6 +16,6 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(format = { "pretty","html:cucumber-html-reports",
-    "json:cucumber-html-reports/cucumber.json" }, glue = "com.mycompany.sos.stepdefinitions", features = {"src/test/resources/items-list.feature"})
+    "json:cucumber-html-reports/cucumber.json" }, glue = "com.mycompany.sos.stepdefinitions", features = {"src/test/resources/customers-create.feature"})
 public class E2EBDDTestRunConfigurationTest {
 }

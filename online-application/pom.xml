@@ -16,9 +16,9 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<spring.version>6.0.8</spring.version>
+		<spring.version>5.2.13.RELEASE</spring.version>
         <spring.data.version>1.11.23.RELEASE</spring.data.version>
-        <spring.security.version>5.2.10.RELEASE</spring.security.version>
+        <spring.security.version>3.2.10.RELEASE</spring.security.version>
 		<junit.version>4.13.1</junit.version>
         <assertj.version>3.4.1</assertj.version> <!-- use 2.4.1 for Java 7 projects -->
 		<mockito.version>1.10.19</mockito.version>
@@ -32,7 +32,7 @@
 		<hibernate.validator.version>5.3.6.Final</hibernate.validator.version>
 		<slf4j-log4j12.version>1.6.1</slf4j-log4j12.version>
 		<dandelion.datatables.version>1.0.0</dandelion.datatables.version>
-		<hsqldb.version>2.7.1</hsqldb.version>
+		<hsqldb.version>2.3.2</hsqldb.version>
 		<h2.version>2.2.220</h2.version>
 		<derby.version>10.14.2.0</derby.version>
         <lombok.version>1.16.8</lombok.version>
@@ -235,6 +235,12 @@
             <!--<scope>provided</scope>-->
         </dependency>
 
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.4</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -347,6 +353,13 @@
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
+				<dependencies>
+          			<dependency>
+            			<groupId>org.apache.tomcat.embed</groupId>
+            			<artifactId>tomcat-embed-core</artifactId>
+            			<version>7.0.109</version>
+          			</dependency>
+		  		</dependencies>
 			</plugin>
 
             <plugin>
